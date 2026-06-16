@@ -23,3 +23,13 @@ h1 {
 .user {
     font-size: 1.9rem;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea {
+    height: 400px;
+}

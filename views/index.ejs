@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <title>Messaging board</title>
-</head>
-<body>
-    <%- include('header') %>
-    <main id="message-board">
+
+<%- include('header') %>
+    
         <% for (let message of messages) { %>
             <section class="section">
                 <p class="user"></p><b><%= message.user %>: </b><%= message.text %></p>
                 <p class="date"><%= message.added %></p>
             </section>
         <% } %>
-    </main>
+        <a href="/new">Add message</a>
     
-</body>
-</html>
+<%- include('footer') %>
