@@ -1,4 +1,4 @@
-# Assignment from The Odin Project at https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board#project-solution
+### Assignment from The Odin Project at https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board#project-solution
 
 The assignmnent requires to build a simple messaging app.
 No message is stored anywhere, they will be persistent as long as they are in RAM.
