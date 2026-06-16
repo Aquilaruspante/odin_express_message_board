@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+#message-board {
+    width: 66%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section {
+    border: 1px grey solid;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.date {
+    color: grey;
+}
+
+.user {
+    font-size: 1.9rem;
+}
