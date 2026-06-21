@@ -1,9 +1,16 @@
+body {
+    background-color: rgb(231, 226, 226);
+}
+
+main {
+    max-width: 600px;
+}
+
 h1 {
     text-align: center;
 }
 
 #message-board {
-    width: 66%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -11,9 +18,11 @@ h1 {
 }
 
 .section {
-    border: 1px grey solid;
+    border: 1px rgb(187, 185, 185) solid;
+    border-radius: 15px;
     box-sizing: border-box;
     padding: 20px;
+    display: flex;
 }
 
 .date {
@@ -21,7 +30,7 @@ h1 {
 }
 
 .user {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
 }
 
 form {
@@ -32,4 +41,78 @@ form {
 
 textarea {
     height: 400px;
+}
+
+button {
+    background-color: rgb(50, 50, 196);
+    color: rgb(221, 221, 236);
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(193, 193, 211);
+}
+
+.icon-section {
+    min-width: 50px;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.icon {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.text-section {
+    box-sizing: border-box;
+    flex-grow: 2;
+    padding: 20px;
+}
+
+.red {
+    background-color: rgb(247, 167, 167);
+    color: rgb(102, 3, 3);
+}
+
+.blue {
+    background-color: rgb(164, 164, 243);
+    color: rgb(3, 3, 128);
+}
+
+.green {
+    background-color: rgb(176, 241, 176);
+    color: rgb(1, 56, 1);
+}
+
+.yellow {
+    background-color: rgb(238, 238, 164);
+    color: rgb(56, 56, 1);
+}
+
+.violet {
+    background-color: rgb(243, 178, 243);
+    color: rgb(65, 3, 65);
+}
+
+.orange {
+    background-color: rgb(243, 216, 166);
+    color: rgb(63, 41, 2);
+}
+
+.button-link {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    main {
+        max-width: 700px;
+    }
 }

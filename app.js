@@ -1,16 +1,25 @@
 const express = require('express');
 const path = require('node:path');
 
+const colors = ['green', 'red', 'blue', 'yellow', 'violet', 'orange'];
+
+function randomColor() {
+    const index = Math.floor(Math.random() * colors.length - 1);
+    return colors[index];
+};
+
 const messages = [
     {
         text: 'Hello there',
         user: 'Armando',
-        added: new Date()
+        added: new Date(),
+        color: 'red'
     },
     {
         text: 'Hi Armando',
         user: 'Catarina',
-        added: new Date()
+        added: new Date(),
+        color: 'blue'
     }
 ];
 
@@ -23,7 +32,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index', { messages });
+    res.render('index', { messages, randomColor });
 });
 
 app.get('/new', (req, res) => {
@@ -32,7 +41,7 @@ app.get('/new', (req, res) => {
 
 app.post('/new', (req, res) => {
     const { user, message } = req.body;
-    messages.push({ text: message, user, added: new Date() });
+    messages.push({ text: message, user, added: new Date(), color: randomColor() });
     res.redirect('/');
 });
 
