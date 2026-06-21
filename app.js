@@ -51,5 +51,5 @@ app.all('/{*splat}', (req, res) => {
 
 app.listen(3000, (error) => {
     if (error) return console.log('Failed to start server', error.message);
-    console.log('Server started at http://127.0.0.1:3000');
+    console.log('Server started at 3000');
 });
