@@ -1,12 +1,12 @@
 # Mini Message Board
 
-A simple in-memory message board built with Node.js and Express, as part of [The Odin Project](https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board) curriculum.
+A simple message board built with Node.js and Express, as part of [The Odin Project](https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board) curriculum.
 
 ## Features
 
 - View all messages with author and timestamp
 - Post new messages via a form
-- Messages persist in RAM (no database)
+- Messages persist in database
 
 ## Routes
 
@@ -21,6 +21,7 @@ A simple in-memory message board built with Node.js and Express, as part of [The
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [EJS](https://ejs.co/) (templating)
+- [pg] (https://node-postgres.com/) (Node SQL API)
 
 ## Getting Started
 
@@ -40,4 +41,12 @@ A simple in-memory message board built with Node.js and Express, as part of [The
 
 ## Notes
 
-Messages are stored in memory — they reset every time the server restarts.
+You need to create a .env file where you store your database credentials as environment variables.
+
+You need to define:
+
+USERNAME=<your postgres username>
+PASSWORD=<your postgres password>
+HOST=<your localhost>
+PORT=<the port where your database runs (usually 5432)>
+DATABASE=<the name you've given to the database>
