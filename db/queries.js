@@ -17,4 +17,7 @@ async function createMessage(message, user) {
             VALUES ('${message}', '${user}', '${new Date()}', '${color}');
         `
     );
-}
+};
+
+
+module.exports = { getMessages, createMessage };
