@@ -45,8 +45,8 @@ You need to create a .env file where you store your database credentials as envi
 
 You need to define:
 
-USERNAME=<your postgres username>
-PASSWORD=<your postgres password>
-HOST=<your localhost>
+USERNAME=<postgres username>
+PASSWORD=<postgres password>
+HOST=<localhost>
 PORT=<the port where your database runs (usually 5432)>
 DATABASE=<the name you've given to the database>
