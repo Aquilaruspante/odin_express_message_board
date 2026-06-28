@@ -4,10 +4,10 @@
         <% for (let message of messages) { %>
             <section class="section">
                 <section class="icon-section">
-                    <div class="icon <%= message.color %>""><%= message.user[0] %></div>
+                    <div class="icon <%= message.color %>""><%= message.username[0] %></div>
                 </section>
                 <section class="text-section">
-                    <p class="user"></p><b><%= message.user %>: </b><%= message.text %></p>
+                    <p class="user"></p><b><%= message.username %>: </b><%= message.text %></p>
                     <p class="date"><%= message.added %></p>
                 </section>
             </section>

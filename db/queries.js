@@ -1,5 +1,7 @@
 const pool = require('./pool');
 
+const colors = ['green', 'red', 'blue', 'yellow', 'violet', 'orange'];
+
 function randomColor() {
     const index = Math.floor(Math.random() * colors.length - 1);
     return colors[index];

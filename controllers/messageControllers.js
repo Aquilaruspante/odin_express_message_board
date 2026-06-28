@@ -1,11 +1,12 @@
 const { getMessages, createMessage } = require('../db/queries');
 
 async function messagesGetAll (req, res) {
-    const messages = await getMessages()
+    const messages = await getMessages();
+    console.log(messages);
     res.render('index', { messages });
 };
 
-function messageCreateget (req, res) {
+function messageCreateGet (req, res) {
     res.render('form');
 };
 
@@ -15,4 +16,4 @@ async function messageCreatePost (req, res) {
     res.redirect('/');
 };
 
-module.exports = { messagesGetAll, messageCreateget, messageCreatePost};
+module.exports = { messagesGetAll, messageCreateGet, messageCreatePost};
