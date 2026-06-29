@@ -1,10 +1,18 @@
 <%- include('header') %>
 
+<% if (locals.errors) { %>
+        <div>
+                <% for (const error of errors) { %>
+                        <div class="error-message"><%= error.msg %></div>
+                <% } %>
+        </div>
+<% } %>
+
 <form action="/new" method="POST">
         <input type="text" id="user" name="user" placeholder="User">
         <textarea name="message" id="text-area" placeholder="Type your message here..."></textarea>
         <button>Send</button>
 </form>
-<a href="/">Back</a>
+<a href="/" class="back-link">Back</a>
 
 <%- include('footer') %>
