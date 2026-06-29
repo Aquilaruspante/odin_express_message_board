@@ -1,11 +1,5 @@
 const { Client } = require('pg');
 
-const username = process.env.USERNAME;
-const password = process.env.PASSWORD;
-const host = process.env.HOST;
-const port = process.env.PORT;
-const database = process.env.DATABASE;
-
 const SQL = `
     CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -24,7 +18,7 @@ const SQL = `
 async function main() {
     console.log('seeding...');
     const client = new Client({
-        connectionString: `postgresql://${username}:${password}@${host}:${port}/${database}`
+        connectionString: process.env.DATABASE_URL
     });
 
     await client.connect();
